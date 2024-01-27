@@ -21,4 +21,9 @@ input_frame.pack()
 output_frame.pack()
 button_frame.pack()
 
+#input widget
+inputEntry=Entry(input_frame, width=25, font=font)
+btnAdd = Button(input_frame, text="เพิ่มรายการ", font=font)
+inputEntry.grid(row=0, column=0, padx=5, pady=5, ipady=6)
+btnAdd.grid(row=0, column=1, padx=5, pady=5)
 root.mainloop()
