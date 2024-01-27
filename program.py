@@ -17,6 +17,9 @@ def addItem():
     listbox.insert(END, data) # END is last order.(last index)
     inputEntry.delete(0, END)
 
+def removeItem():
+    listbox.delete(ANCHOR) # ANCHOR is item as selected by click.
+
 
 #design frame
 input_frame = Frame(root, bg=color)
@@ -38,7 +41,7 @@ listbox = Listbox(output_frame, width=35, height=12, font=font)
 listbox.grid(row=0, column=0, padx=5, pady=5)
 
 #button widget
-btnRemove = Button(button_frame, text="Remove Item", font=font)
+btnRemove = Button(button_frame, text="Remove Item", font=font, command=removeItem)
 btnClear = Button(button_frame, text="Clear Items", font=font)
 btnQuit=Button(button_frame, text="Close", font=font, command=root.destroy)
 
