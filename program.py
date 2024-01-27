@@ -11,4 +11,14 @@ root.resizable(0,0)
 font=("arial", 15)
 color="purple"
 root.config(bg=color)
-root,mainloop()
+
+#design frame
+input_frame = Frame(root, bg=color)
+output_frame = Frame(root, bg=color)
+button_frame = Frame(root, bg=color)
+
+input_frame.pack()
+output_frame.pack()
+button_frame.pack()
+
+root.mainloop()
